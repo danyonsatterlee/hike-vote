@@ -6,8 +6,8 @@ let voteSchema = new Schema({
         type: String,
         required: true
     },
-     location:{
-         type:String,
+     length:{
+         type:Number,
          required:true
      }, 
      difficulty: String,
@@ -17,7 +17,7 @@ let voteSchema = new Schema({
         },
      park: String,
      image: String,
-     directions:{
+     location:{
          type:String,
          required: true
         },
