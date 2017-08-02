@@ -9,7 +9,7 @@ class HikeListCon extends React.Component{
     }
     render(){
         return(
-<HikeList></HikeList>
+<HikeList hike={this.props.hike} handleDown={this.props.downVote} handleUp={this.props.upVote} handleSave={this.props.editData} handleRemove={this.props.deleteData}></HikeList>
 
         );
     }

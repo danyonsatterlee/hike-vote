@@ -8,5 +8,9 @@ body {
 .hike{
   background-color:green;
   color:white;
-  
+
+}
+
+.hike-pic{
+  max-height: 350px;
 }

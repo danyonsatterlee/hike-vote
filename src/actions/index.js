@@ -34,7 +34,7 @@ export function deleteData(id){
 
 export function editData(id,data){
     return(dispatch)=>{
-        return axios.put(`http://localhost:8080/vote/${id}`).then((response)=>{
+        return axios.put(`http://localhost:8080/votes/${id}`,data).then((response)=>{
             dispatch(loadData());
         }).catch((error)=>{
             throw error;
@@ -42,6 +42,24 @@ export function editData(id,data){
     }
 }
 
+export function upVote(id){
+    return(dispatch)=>{
+        return axios.put(`http://localhost:8080/votes/upvote/${id}`).then((response)=>{
+        dispatch(loadData());
+        }).catch((error)=>{
+            throw error;
+        });
+    }
+}
+export function downVote(id){
+    return(dispatch)=>{
+        return axios.put(`http://localhost:8080/votes/downvote/${id}`).then((response)=>{
+        dispatch(loadData());
+        }).catch((error)=>{
+            throw error;
+        });
+    }
+}
 export function setData(data){
     return{
         type:"SET_DATA",

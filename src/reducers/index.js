@@ -9,7 +9,8 @@ let defaultState = {
             image: "",
             directions: "",
             description: "",
-            length: ""
+            length: "",
+            upvotes: ""
         }
 
     ]

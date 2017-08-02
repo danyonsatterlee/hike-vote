@@ -51,7 +51,8 @@ voteRouter.post("/", (req,res)=>{
 
 //UPDATE
 voteRouter.put("/:_id", (req, res)=>{
-    Vote.findByAndUpdate(req.params._id, req.body, {new:true}, (err,data)=>{
+  
+    Vote.findByIdAndUpdate(req.params._id, req.body, {new:true}, (err,data)=>{
         if(err){
             res.status(500).send({"message":" Error within server", err});
         } else if(data===null){
@@ -82,7 +83,7 @@ voteRouter.put("/upvote/:_id", (req,res)=>{
         if(err){
             res.status(500).send({"message": "Error on server", err});
         } else if(data===null){
-            res.status(404).send({"message": `Item with id of ${req.params.id} was not found`})
+            res.status(404).send({"message": `Item with id of ${req.params._id} was not found`})
         } else{
             data.upvotes +=1;
             data.save((err, data)=>{
@@ -99,12 +100,12 @@ voteRouter.put("/upvote/:_id", (req,res)=>{
 
 });
 
-voteRouter.put("/downvotes/:_id", (req,res)=>{
+voteRouter.put("/downvote/:_id", (req,res)=>{
         Vote.findOne({"_id": req.params._id}, (err,data)=>{
         if(err){
             res.status(500).send({"message": "Error on server", err});
         } else if(data===null){
-            res.status(404).send({"message": `Item with id of ${req.params.id} was not found`})
+            res.status(404).send({"message": `Item with id of ${req.params._id} was not found`})
         } else{
             data.downvotes +=1;
             data.save((err, data)=>{
