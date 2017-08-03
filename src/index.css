@@ -6,8 +6,11 @@ body {
 
 
 .hike{
-  background-color:green;
-  color:white;
+  background-color:#1fa67a;
+  -webkit-box-shadow: 10px 10px 44px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 44px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 44px 0px rgba(0,0,0,0.75);
+
 
 }
 
@@ -18,20 +21,26 @@ body {
 .bk-img{
  background: url('/img/landscape.jpg') no-repeat fixed center;
   width:100%;
-  height:400px;
+  height: 80vh;
+}
+
+.hiking-bk{
+
+ /*background: url('/img/hiking.jpg') no-repeat fixed center;
+  width:100%;
+  height: 80vh;*/
+
 }
 
 .hiker-parent{
   display:flex;
    flex-direction:column;
   justify-content: center;
-  /* justify-content: space-around; */
+
   align-items: center;
 
 }
-.hiker-headline{
-  
-}
+
 
 .hiker-child{
   width: 100%;
@@ -54,6 +63,25 @@ padding-bottom: 30px;
 
 }
 
+.add-header{
+
+    font-family:'Lato', 'sans-serif';
+  font-weight: 700;
+
+  font-size: 3em;
+  text-transform: uppercase;
+
+}
+
+.hike-header{
+      font-family:'Lato', 'sans-serif';
+  font-weight: 700;
+
+  font-size: 3em;
+  text-transform: uppercase;
+  color:white;
+}
+
 .sub-hike-header{
     font-family:'Lato', 'sans-serif';
   font-weight: 700;
@@ -63,3 +91,86 @@ padding-bottom: 30px;
   display: inline-block;
 
 }
+
+.space{
+  padding-top:10vh;
+  padding-bottom: 10vh;
+
+}
+
+.mini-wrapper{
+  width:100%;
+  display:flex;
+     flex-direction:column;
+  justify-content: center;
+  /* justify-content: space-around; */
+  align-items: center;
+  /*margin-top: 10em;*/
+}
+
+.bar{
+  background-color:#ff5252;
+  height: 10px;
+  text-align: center;
+  width: 60em;
+  margin-bottom: 5em;
+  margin-top: 5em;
+}
+
+.btn-custom{
+   width: 50em;
+   margin-top: 5em;
+    background-color:#ff5252;
+    border: none;
+    color:white;
+    font-family:'Lato', 'sans-serif';
+}
+
+input{
+  width: 100%;
+  }
+
+  select{
+    width: 100%;
+  }
+
+  .hike-name{
+        color:white;
+    font-family:'Lato', 'sans-serif';
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .result-title{
+    color:white;
+       font-family:'Lato', 'sans-serif';
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  .result-p{
+        color:white;
+       font-family:'Lato', 'sans-serif';
+       text-align: center;
+
+
+  }
+
+  .results{
+    display: inline !important;
+    color:white;
+    padding: 10px;
+
+  }
+
+  .vote{
+    width:100%;
+    text-align: center;
+  }
+
+h3{
+  text-transform: uppercase;
+}
+

@@ -4,20 +4,29 @@ class Form extends React.Component {
     render() {
         return (
 
-            <div className="row">
+            <div className="row space">
+                <div className="mini-wrapper center-block">
+               <div className="bar text-center"></div>
+               </div>
                 <div className="col-md-12">
-                    <h1 className="text-center">Add a Hike</h1>
+                    <h1 className="text-center add-header">Add Hike</h1>
                 </div>
-                <div className="col-md-3 col-md-offset-3 ">
+                <div className="col-md-3 col-md-offset-3 text-center">
 
                     <h3>Hike Name</h3>
                     <input value ={this.props.input.title} onChange = {(event)=>{this.props.handleChange("title", event)}} placeholder="ex. Fairy Falls"/>
 
                     <h3>Difficulty</h3>
-                    <input value ={this.props.input.difficulty} onChange = {(event)=>{
+<select value ={this.props.input.difficulty} onChange = {(event)=>{
                         this.props.handleChange("difficulty", event)
-                    }}
-                    placeholder="ex. Fairy Falls"/>
+                    }}>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                        <option value="Extreme">Extreme</option>
+                   
+               
+                    </select>
                     <h3>State</h3>
                     <select value ={this.props.input.state} onChange = {(event)=>{
                         this.props.handleChange("state", event)
@@ -75,13 +84,13 @@ class Form extends React.Component {
                         <option value="WY">WY</option>
                     </select>
                     <h3>National or State Park</h3>
-                    <p>if not applicable please put NA</p>
+                  
                     <input value ={this.props.input.park} onChange = {(event)=>{
                         this.props.handleChange("park", event)
                     }}
                     placeholder="ex. Yellowstone"/>
                 </div>
-                <div className="col-md-4 col-md-offset-1">
+                <div className="col-md-3 text-center">
                     <h3>Length</h3>
                     <input value ={this.props.input.length} onChange = {(event)=>{
                         this.props.handleChange("length", event)
@@ -102,8 +111,12 @@ class Form extends React.Component {
                         this.props.handleChange("description", event)
                     }}
                     placeholder="The hike was wonderful becuase..."/>
-                    <button onClick={()=>{this.props.handleClick(this.props.input)}}>submit</button>
+     
                 </div>
+                   <div className="mini-wrapper center-block">
+                    <button  className="btn-lg btn-custom" onClick={()=>{this.props.handleClick(this.props.input)}}>submit</button>
+                    </div>
+                   
             </div>
 
         );
