@@ -5,13 +5,19 @@ class Header extends React.Component{
     render(){
         return(
             <div className="row">
-                <div className="col-md-12 text-center">
-                    <h1 className="text-center">Best Hikes</h1>
+                <div className="bk-img hiker-parent text-center ">
+              
+                    <div className="hiker-child">
+                    <h1 className="text-center h1-hike-header">Best Hikes</h1>
+                   <p className="sub-hike-header">Add your favorite hike to the list. Vote on hikes. Find the best hikes in the country</p>
      
-                    <button><a className="text-center" href="#">see hikes</a></button> <button><a className="text-center" href="#">add a hike</a></button>
+                    <p><a className="text-center sub-hike-header" href="#">see hikes   </a> | <a className="text-center sub-hike-header" href="#">add a hike</a></p>
+                
+                 </div>
+                </div>
                 </div>
 
-                </div>
+          
                  
                     
                

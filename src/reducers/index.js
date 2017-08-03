@@ -10,7 +10,7 @@ let defaultState = {
             directions: "",
             description: "",
             length: "",
-            upvotes: ""
+            
         }
 
     ]
